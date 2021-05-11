@@ -1,0 +1,24 @@
+<!--import-->
+
+{% extends 'base.html' %}
+
+<!--start title-->
+{% block title %} Login {% endblock %}
+<!--end title-->
+
+{% block content %}
+
+<div class="container col-md-4 offset-4 mt-5">
+    <form action="" class="form-group" method="POST"> {% csrf_token %}
+        <h3 class="text-center">
+            Login
+        </h3>
+        <hr>
+        <input type="text" class="form-control" name="username" id="" placeholder="Username">
+        <br>
+        <input type="password" class="form-control" name="password" id="" placeholder="Enter Password">
+        <br>
+        <input type="submit" class="btn btn-info form-control" value="Login">
+    </form>
+</div>
+{% endblock %}
