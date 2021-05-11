@@ -1,6 +1,6 @@
-<!--import base template-->
+<!--import-->
 
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 
 <!--start title-->
 {% block title %} About {% endblock %}
@@ -14,4 +14,4 @@
 <h4 class='text-center'>
     {{ aboutDescription }}
 </h4>
-{% endblock %}
+<img style="width: 100%; height: auto" src="{% static 'img/img1.JPG' %}" alt=""> {% endblock %}
