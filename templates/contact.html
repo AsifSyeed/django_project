@@ -11,7 +11,8 @@
 
 <div class="mt-5" align="center">
 
-    <form action="" class="form-group col-md-6">
+    <form action="" method="POST" class="form-group col-md-6">
+        {% csrf_token %}
         <h3 class="text-center">
             Contact Me
         </h3>

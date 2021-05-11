@@ -28,4 +28,13 @@ def about(request):
 	return render(request, 'about.html', context)
 
 def contact(request):
+
+	name = request.POST.get('name')
+	email = request.POST.get('email')
+	comment = request.POST.get('comments')
+
+	print(name)
+	print(email)
+	print(comment)
+
 	return render(request, 'contact.html')
