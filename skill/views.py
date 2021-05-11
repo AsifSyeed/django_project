@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import skill
+from .models import skill, ContactInfo
 
 def home(request):
 
@@ -29,12 +29,17 @@ def about(request):
 
 def contact(request):
 
-	name = request.POST.get('name')
-	email = request.POST.get('email')
-	comment = request.POST.get('comments')
+	if  request.method == 'POST':
 
-	print(name)
-	print(email)
-	print(comment)
+		name = request.POST.get('name')
+		email = request.POST.get('email')
+		comment = request.POST.get('comments')
+
+		saveData = ContactInfo()
+		saveData.cName = name 
+		saveData.cEmail = email
+		saveData.cComment = comment
+
+		saveData.save()
 
 	return render(request, 'contact.html')

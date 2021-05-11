@@ -13,3 +13,13 @@ class skill(models.Model):
 
 	def summary(self):
 		return  self.descipt[0:100]
+
+class ContactInfo(models.Model):
+
+	cName = models.CharField(max_length=50)
+	cEmail = models.CharField(max_length=50)
+	cComment = models.TextField(max_length=1000)
+
+	def __str__(self):
+		return self.cName
+	
