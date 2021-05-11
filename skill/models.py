@@ -8,3 +8,6 @@ class skill(models.Model):
 	descipt = models.TextField(max_length=500, blank=True)
 	dateTime = models.DateTimeField(auto_now_add=True)
 
+	def __str__(self):
+		return self.title
+	
