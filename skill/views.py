@@ -1,12 +1,20 @@
 from django.shortcuts import render
+from .models import skill
 
 def home(request):
 
 	title = 'Hello everyone this is nemes1s'
 	descript = 'Developer/ Music Composer/ Gamer'
 
+	item = skill.objects.all()
 
-	return render(request, 'index.html', {'title': title, 'description': descript})
+	context = {
+		'title': title,
+		'description': descript,
+		'data': item,
+	}
+
+	return render(request, 'index.html', context)
 
 def about(request):
 
