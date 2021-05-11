@@ -1,3 +1,17 @@
-{% extends 'base.html' %} {% block title %} About {% endblock %} {% block content %}
-<h1 class="text-center">About</h1>
+<!--import base template-->
+
+{% extends 'base.html' %}
+
+<!--start title-->
+{% block title %} About {% endblock %}
+<!--end title-->
+
+
+<!--start body-->
+{% block content %}
+<h1 class="text-center">{{ title }}</h1>
+<hr>
+<h4 class='text-center'>
+    {{ aboutDescription }}
+</h4>
 {% endblock %}
