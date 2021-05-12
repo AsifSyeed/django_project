@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 def user_log(request):
@@ -18,3 +18,7 @@ def user_log(request):
 		else:
 			print('user not found')
 	return render(request, './auth/login.html', {})
+
+def user_logout(request):
+	logout(request)
+	return redirect('login')
